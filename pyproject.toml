@@ -15,5 +15,5 @@ dependencies = ["pythonnet>=3.0"]
 Homepage = "https://github.com/TheNeyzi4/pysfml-net"
 Issues   = "https://github.com/TheNeyzi4/pysfml-net/issues"
 
-[tool.setuptools.package.find]
+[tool.setuptools.packages.find]
 include = ["pysfml*"]
