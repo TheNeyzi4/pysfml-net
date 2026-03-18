@@ -26,7 +26,7 @@ try:
 except Exception as e:
     raise ImportError(
         f"pysfml: failed to load SFML assemblies from '{_dll_dir}'.\n"
-        f"Make sure pysfmllib.dll, SFML.*.dll, csfml-*.dll and sfml-*-3.dll "
+        f"Make sure csfml-*.dll and sfml-*-3.dll "
         f"are in the same folder as your script.\n"
         f"Original error: {e}"
     )
@@ -41,7 +41,6 @@ def _get(name: str):
     if t is None:
         raise ImportError(
             f"pysfml: type '{name}' not found in pysfmllib.dll. "
-            f"Rebuild the C# project and replace pysfmllib.dll."
         )
     return t
 
