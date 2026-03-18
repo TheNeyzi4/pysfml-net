@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pysfml-net"
-version = "1.1.2"
+version = "1.1.1"
 description = "Python wrapper for SFML via C# (SFML.NET) and pythonnet"
 readme = "README.md"
 license = { file = "LICENSE" }
