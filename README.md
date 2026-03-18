@@ -1,6 +1,8 @@
 # pysfml-net
+
 ![PyPI](https://img.shields.io/pypi/v/pysfml-net)
 ![License](https://img.shields.io/github/license/TheNeyzi4/pysfml-net)
+
 > A Python wrapper around SFML via C# (SFML.NET) and pythonnet.  
 > Write 2D games in Python — with the performance of native C++.
 
@@ -32,10 +34,6 @@ pip install pysfml-net
 > You must place the following DLLs in the same folder as your script:
 
 ```
-SFML.System.dll
-SFML.Window.dll
-SFML.Graphics.dll
-SFML.Audio.dll
 csfml-system.dll
 csfml-window.dll
 csfml-graphics.dll
