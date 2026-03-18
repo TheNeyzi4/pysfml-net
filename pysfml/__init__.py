@@ -5,5 +5,5 @@ from pysfml.sound  import Sound
 
 __all__ = ["Window", "Sprite", "Label", "Sound"]
 
-__version__ = "1.0.7"
+__version__ = "1.1.0"
 __author__  = "Neyzi"

@@ -31,7 +31,6 @@ pip install pysfml-net
 > You must place the following DLLs in the same folder as your script:
 
 ```
-pysfmllib.dll         ← C# bridge (download from Releases)
 SFML.System.dll
 SFML.Window.dll
 SFML.Graphics.dll

@@ -8,9 +8,14 @@ import System
 
 _dll_dir = os.getcwd()
 
-if os.path.exists(_dll_dir):
-    os.add_dll_directory(_dll_dir)
-    os.environ["PATH"] = _dll_dir + os.pathsep + os.environ.get("PATH", "")
+_lib_dir = os.path.join(os.path.dirname(__file__), "libs")
+
+for _dir in (_lib_dir, _dll_dir):
+    if os.path.exists(_dir):
+        os.add_dll_directory(_dir)
+        os.environ["PATH"] = _dir + os.pathsep + os.environ.get("PATH", "")
+        if _dir not in sys.path:
+            sys.path.insert(0, _dir)
 
 try:
     clr.AddReference("SFML.System")
