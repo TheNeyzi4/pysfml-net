@@ -22,12 +22,7 @@ obj/
 *.pdb
 
 *.dll
-
-!pysfml/libs/pysfmllib.dll
-!pysfml/libs/SFML.System.dll
-!pysfml/libs/SFML.Window.dll
-!pysfml/libs/SFML.Graphics.dll
-!pysfml/libs/SFML.Audio.dll
+!libs/*.dll
 
 .DS_Store
 Thumbs.db
