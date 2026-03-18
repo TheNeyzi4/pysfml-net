@@ -1,5 +1,6 @@
 # pysfml-net
-
+![PyPI](https://img.shields.io/pypi/v/pysfml-net)
+![License](https://img.shields.io/github/license/TheNeyzi4/pysfml-net)
 > A Python wrapper around SFML via C# (SFML.NET) and pythonnet.  
 > Write 2D games in Python — with the performance of native C++.
 
