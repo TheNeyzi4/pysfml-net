@@ -17,3 +17,6 @@ Issues   = "https://github.com/TheNeyzi4/pysfml-net/issues"
 
 [tool.setuptools.packages.find]
 include = ["pysfml*"]
+
+[tool.setuptools.package-data]
+pysfml = ["libs/*.dll"]
