@@ -345,4 +345,4 @@ All DLLs must match (all x64 or all x32).
 
 ## License
 
-MIT — © 2025 Neyzi
+MIT — © 2026 Neyzi
