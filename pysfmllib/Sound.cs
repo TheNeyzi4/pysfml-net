@@ -16,6 +16,7 @@ namespace pysfmllib
         public void Play() => sound.Play();
         public void Stop() => sound.Stop();
         public void Pause() => sound.Pause();
+        public void SetLoop(bool IsLooping) => sound.IsLooping = IsLooping;
         public void SetVolume(float v) => sound.Volume = v;
     }
 }

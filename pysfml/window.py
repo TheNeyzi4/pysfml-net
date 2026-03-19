@@ -1,3 +1,4 @@
+import os
 from pysfml._core import CsWindow, Keyboard, Mouse, System
 
 class Window:
@@ -30,11 +31,33 @@ class Window:
 
   def get_delta_time(self) -> float:
     return self._obj.GetDeltaTime()
+  
+  def set_view(self, camera):
+    if hasattr(camera, "_obj"):
+      self._obj.SetView(camera._obj.GetView())
+    else:
+      self._obj.SetView(camera)
 
-  def clear(self):
-    self._obj.Clear()
+  def clear(self, r=0, g=0, b=0):
+    self._obj.Clear(System.Byte(r), System.Byte(g), System.Byte(b))
   def close(self):
     self._obj.Close()
+  
+  def set_title(self, title: str):
+    self._obj.SetTitle(System.String(title))
+  
+  def set_framerate_limit(self, fps: int):
+    self._obj.SetFramerateLimit(System.UInt32(fps))
+  
+  def set_vsync(self, enabled: bool):
+    self._obj.SetVerticalSyncEnabled(System.Boolean(enabled))
+  
+  def set_icon(self, path: str):
+    self._obj.SetIcon(System.String(os.path.abspath(path)))
+  
+  def get_size(self) -> tuple:
+    pos = self._obj.GetSize()
+    return ( pos.X, pos.Y )
 
   def display(self):
     self._obj.Display()

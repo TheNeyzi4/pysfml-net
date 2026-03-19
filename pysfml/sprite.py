@@ -15,14 +15,44 @@ class Sprite:
       raise RuntimeError(f"Failed to create Sprite: {e}")
 
   def set_position(self, x, y):
-    self.x, self.y = x, y
+    self._x, self._y = x, y
     return self._obj.SetPosition(System.Single(x), System.Single(y))
+
+  def get_position(self) -> tuple:
+    pos = self._obj.GetPosition()
+    return ( pos.X, pos.Y )
   
   def set_size(self, w, h):
     self._w = float(w)
     self._h = float(h)
     self._obj.SetSize(System.Single(w), System.Single(h))
   
+  def get_size(self) -> tuple:
+    size = self._obj.GetSize()
+    return ( size.X, size.Y )
+
+  def set_origin(self, x: float, y: float):
+    self._obj.SetOrigin(System.Single(x), System.Single(y))
+  
+  def get_origin(self) -> tuple:
+    origin = self._obj.GetSize()
+    return ( origin.X, origin.Y )
+
+  def set_rotation(self, angle: float):
+    self._obj.SetRotation(System.Single(angle))
+  
+  def get_rotation(self):
+    return self._obj.GetSize()
+
+  def set_scale(self, x: float, y: float):
+    self._obj.SetScale(System.Single(x), System.Single(y))
+  
+  def flip_x(self):
+    self._obj.FlipX()
+  
+  def flip_y(self):
+    self._obj.FlipY()
+
   def set_fill_color(self, r,g,b,a=255):
     self._obj.SetFillColor(System.Byte(r), System.Byte(g), System.Byte(b), System.Byte(a))
 

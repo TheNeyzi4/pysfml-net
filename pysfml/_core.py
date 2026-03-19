@@ -33,8 +33,9 @@ except Exception as e:
 
 try:
     from SFML.Window import Keyboard, Mouse
+    from SFML.Graphics import View
 except Exception as e:
-    raise ImportError(f"pysfml: could not import SFML.Window enums: {e}")
+    raise ImportError(f"pysfml: could not import SFML.Window enums and from SFML.Graphics import View: {e}")
 
 def _get(name: str):
     t = _assembly.GetType(name)
@@ -48,3 +49,4 @@ CsWindow = _get("pysfmllib.Window")
 CsSprite = _get("pysfmllib.Sprite")
 CsLabel  = _get("pysfmllib.Label")
 CsSound  = _get("pysfmllib.Sound")
+CsCamera = _get("pysfmllib.Camera")

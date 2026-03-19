@@ -7,7 +7,10 @@ class Sound:
     self._obj = System.Activator.CreateInstance(CsSound, s_path)
 
   def set_volume(self, v: float):
-    self._obj.SetVolume(v)
+    self._obj.SetVolume(System.Single(v))
+  
+  def set_loop(self, is_looping: bool):
+    self._obj.SetLoop(System.Boolean(is_looping))
 
   def play(self):
     self._obj.Play()
